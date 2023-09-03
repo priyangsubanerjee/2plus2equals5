@@ -53,6 +53,8 @@ export default function Home() {
           <li>акции</li>
           <li>ТИХО</li>
           <li>ГРОМКО</li>
+          <li>ГРОМКО</li>
+          <li>ГРОМКО</li>
         </ul>
         <div className="-translate-x-[40%]">
           <svg
