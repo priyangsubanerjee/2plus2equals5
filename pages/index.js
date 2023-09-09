@@ -7,21 +7,9 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const [firstMenuOpen, setFirstMenuOpen] = useState(false);
-
-  useEffect(() => {
-    document.getElementById("appLayer").addEventListener("click", (e) => {
-      if (e.target.closest(".firstMenu")) return;
-      setFirstMenuOpen(false);
-    });
-  }, []);
-
   return (
-    <main>
-      <section
-        id="appLayer"
-        className={`flex min-h-screen flex-col h-screen overflow-auto`}
-      >
+    <main className="h-full overflow-auto">
+      <section className="h-full">
         <div className="grid shrink-0 grid-cols-2 divide-x divide-black border-b border-black">
           <button className="h-[99px] flex items-center justify-center">
             <span>он</span>
@@ -30,7 +18,6 @@ export default function Home() {
             <span>она</span>
           </button>
         </div>
-
         <div className=" h-full bg-red-50 flex items-center overflow-hidden">
           <img
             className="object-cover w-full h-full"
@@ -39,10 +26,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section
-        id="appLayer"
-        className={`flex min-h-screen flex-col h-screen overflow-auto`}
-      >
+      <section className="h-full">
         <div className="h-full relative flex items-center overflow-hidden">
           <img
             className="object-cover w-full h-full"
