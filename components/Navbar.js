@@ -1,8 +1,10 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 
 function Navbar() {
   const [catalogueOpen, setCatalogueOpen] = useState(false);
+  const router = useRouter();
 
   const menu = () => {
     return (
@@ -36,8 +38,12 @@ function Navbar() {
     <nav className="flex shrink-0 items-center h-[50px] border-b border-black justify-between fixed top-0 inset-x-0 bg-white z-20 text-xl">
       <ul className="flex items-center h-full space-x-7 uppercase text-sm">
         <Link
+          style={{
+            color: router.pathname === "/about" ? "#fff" : "#000",
+            backgroundColor: router.pathname === "/about" ? "#000" : "#fff",
+          }}
           href="/about"
-          className="h-full bg-black text-white flex items-center pl-10 pr-4"
+          className="h-full flex items-center pl-10 pr-4"
         >
           <li>о проекте</li>
         </Link>
